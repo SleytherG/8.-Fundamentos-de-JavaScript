@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let sleyther = {
+            nombre: 'Sleyther Giulio',
+            apellido: 'Calsin Pacsi',
+            edad: 23
+        }
+
+        function imprimirNombreEnMayusculas(persona) {
+            //
+            let {nombre} = persona;
+            console.log(nombre.toUpperCase())
+        }
+        imprimirNombreEnMayusculas(sleyther)
+
+
+        function imprimirNombreYEdad(persona) {
+            // Hola, Me llamo Sleyther y tengo 28 años
+            console.log(`Hola, Me llamo ${persona.nombre}, Mi apellido es ${persona.apellido} y tengo ${persona.edad} años. Nice to meet you!`);
+        }
+        imprimirNombreYEdad(sleyther);
+
+    </script>
+</body>
+</html>

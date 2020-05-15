@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let sleyther = {
+            nombre: 'Sleyther',
+            apellido: 'Calsin Pacsi',
+            altura: 1.71
+        }
+        let sacha = {
+            nombre: 'Sacha',
+            apellido: 'Lifszyc',
+            altura: 1.65
+        }
+        let paula = {
+            nombre: 'Paula',
+            apellido: 'Dominguez',
+            altura: 1.75
+        }
+        let juana = {
+            nombre: 'Juana',
+            apellido: 'Gutierrez',
+            altura: 1.50
+        }
+        let dario = {
+            nombre: 'Dario',
+            apellido: 'Zapata',
+            altura: 1.56
+        }
+        let maria = {
+            nombre: 'Maria',
+            apellido: 'Barros',
+            altura: 1.76
+        }
+
+        // const esAlta = persona => persona.altura > 1.7;
+
+        const esAlta = ({ altura }) => altura > 1.7;
+        const esBaja = persona => persona.altura <= 1.7;
+        // const pasarAlturaACms = ({ altura }) => altura * 100;
+        // const pasarAlturaACms = persona => {
+        //     // persona.altura *= 100;
+        //     return {
+        //         ...persona,
+        //         altura: persona.altura * 100
+        //     };
+        // }
+        const pasarAlturaACms = persona => (
+            {
+                ...persona,
+                altura:persona.altura*100
+            });
+
+
+
+        let personas = [sleyther,sacha,paula,juana,dario,maria];
+
+        let personasAltas = personas.filter(esAlta);
+        let personasBajas = personas.filter(esBaja);
+
+        let personasCms = personas.map(pasarAlturaACms);
+
+        console.log(personasAltas);
+        console.log(personasBajas);
+        console.log(personasCms);
+
+        // for (let i=0; i < personas.length; i++) {
+        //     console.log(`${personas[i]['nombre']} mide ${personas[i]['altura']}mts`);
+        // }
+        
+        // for (let i=0; i < personas.length; i++) {
+        //     if (personas[i]['altura'] >= 1.7) {
+        //         console.log(`${personas[i]['nombre']} tiene una estatura de ${personas[i]['altura']} es una persona alta de estatura`);
+        //     } else {
+        //         console.log(`${personas[i]['nombre']} tiene una estatura de ${personas[i]['altura']} es una persona baja de estatura`);
+        //     }
+        //     // console.log(`${personas[i]['nombre']} mide ${personas[i]['altura']}mts`);
+        // }
+
+
+
+    </script>
+</body>
+</html>

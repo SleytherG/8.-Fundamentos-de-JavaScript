@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sacha = {
+            nombre: 'Sacha',
+            apellido: 'Lifszyc',
+            edad: 28
+        }
+
+
+        function esMayorDeEdad(persona) {
+            let mensaje
+            if (persona.edad > 18) {
+                mensaje = `Es mayor de edad`
+            } else {
+                mensaje = `Es menor de edad`
+            }
+            console.log(mensaje)
+        }
+
+        esMayorDeEdad(sacha)
+
+    </script>
+</body>
+</html>

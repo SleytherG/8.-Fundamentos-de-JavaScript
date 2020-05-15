@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript</title>
+ 
+</head>
+<body>
+	<input type="text" id="numero" placeholder="Escribe una tabla">
+	<button id="iniciar">Iniciar tabla</button>
+ 
+ 
+	<script type="text/javascript">
+		document.getElementById("iniciar").onclick = function(){
+			//capturar numero ingresado
+			var entradaNumero = document.getElementById("numero").value;
+			//iniciar tabla
+			for (var i=0; i<=10; i++){
+			//Bloque de instrucciones
+			var resultado = entradaNumero * i;
+            document.write(`<br>`);
+			document.write(entradaNumero+" * "+i+" = "+resultado);
+			}
+            document.write(`<br>`);
+			document.write("Fin del for");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombre = 'Sleyther Giulio', apellido = 'Calsin Pacsi';
+
+        let nombreEnMayusculas = nombre.toUpperCase();
+        console.log(nombreEnMayusculas);
+        let apellidoEnMinusculas = apellido.toLowerCase();
+        console.log(apellidoEnMinusculas);
+
+        let primeraLetraDelNombre = nombre.charAt(0);
+        console.log(primeraLetraDelNombre);
+        let cantidadDeLetrasDelNombre = nombre.length;
+        console.log(cantidadDeLetrasDelNombre);
+
+        let nombreCompleto = `${nombre.toLowerCase()} ${apellido.toUpperCase()}`;
+        console.log(nombreCompleto);
+
+        let str = nombre.charAt(1) + nombre.charAt(2);
+        console.log(str);
+
+        let str1 = nombre.substr(0,3);
+        console.log(str1);
+
+        let nombreUsuario = prompt('Ingrese su nombre: ');
+        let ultimaLetra = nombreUsuario.substr(-1);
+        console.log(`La ultima letra de su nombre es ${ultimaLetra.toUpperCase()}`);
+    </script>
+</body>
+</html>

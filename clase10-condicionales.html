@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var sleyther = {
+            nombre: 'Sleyther Giulio',
+            apellido: 'Calsin Pacsi',
+            edad: 23,
+            ingeniero: true,
+            cocinero: true,
+            cantante: false,
+            dj: false,
+            guitarrista: false,
+            dron: true
+        }
+
+        function imprimirProfesiones(persona) {
+            console.log(`${persona.nombre} es:`);
+            if (persona.ingeniero) {
+            console.log('Ingeniero');
+            } else {
+                console.log('No es Ingeniero')
+            }
+            if(persona.cocinero) {
+                console.log('Cocinero')
+            } else {
+                console.log('No es Cocinero')
+            }
+            if(persona.cantante) {
+                console.log('Cantante')
+            } else {
+                console.log('No es Cantante')
+            }
+            if(persona.dj) {
+                console.log('DJ')
+            } else {
+                console.log('No es DJ')
+            }
+            if(persona.guitarrista) {
+                console.log('Guitarrista')
+            } else {
+                console.log('No es Guitarrista')
+            }
+            if(persona.dron) {
+                console.log('Piloto Dron')
+            } else {
+                console.log('No es Piloto Dron')
+            }
+        }
+        imprimirProfesiones(sleyther);
+
+
+        function imprimirSiEsMayorDeEdad(persona) {
+            // Sleyther es mayor de edad
+            // Sacha es menor de edad
+            if (persona.edad >= 18) {
+                console.log(`${persona.nombre} es mayor de edad`);
+            } else {
+                console.log(`${persona.nombre} es menor de edad`);
+            }
+        }
+
+        imprimirSiEsMayorDeEdad(sleyther);
+
+
+    </script>
+</body>
+</html>

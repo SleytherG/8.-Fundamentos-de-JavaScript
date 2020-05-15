@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let sleyther = {
+            nombre: 'Sleyther Giulio',
+            apellido: 'Calsin Pacsi',
+            edad: 23
+        }
+
+        let juan = {
+            nombre:'Juan',
+            apellido: 'Espinoza',
+            edad: 17
+        }
+
+        let MAYORIA_DE_EDAD = 18
+
+        function esMayorDeEdad(persona) {
+            return persona.edad >= MAYORIA_DE_EDAD;
+        }
+        function imprimirSiEsMayorDeEdad(persona) {
+            if (esMayorDeEdad(persona)) {
+                console.log(`${persona.nombre} es mayor de edad`)
+            } else {
+                console.log(`${persona.nombre} es menor de edad`);
+            }
+        }
+
+            imprimirSiEsMayorDeEdad(sleyther);
+            imprimirSiEsMayorDeEdad(juan);
+
+        
+    </script>
+</body>
+</html>

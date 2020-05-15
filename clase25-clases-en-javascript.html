@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Persona {
+            constructor(nombre,apellido,altura) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.altura = altura;
+        }
+            saludar(fn) {
+                var {nombre, apellido } = this;
+                console.log(`Hola, me llamo ${nombre} ${apellido}`);
+                if (fn)  {
+                    fn(nombre,apellido)
+                }
+        }
+            soyAlto() {
+                return this.altura > 1.7;
+            }
+        }    
+        
+        class Desarrollador extends Persona {
+            constructor(nombre,apellido,altura) {
+                super(nombre,apellido,altura)
+        }
+            saludar(fn){
+                // let nombre = this.nombre;
+                // let apellido = this.apellido;
+                let { nombre, apellido } = this;
+                console.log(`Hola, me llamo ${nombre} ${apellido} y soy desarrollador/a.`);
+                if (fn)  {
+                    fn(nombre,apellido,true)
+                }
+            }
+        }
+
+        function responderSaludo(nombre,apellido, esDev) {
+            console.log(`Buen Día ${nombre} ${apellido}`);
+            if (esDev) {
+                console.log(`Ah mirá, no sabía que eras desarrollador/a`);
+            }
+        }
+
+        let sleyther = new Persona('Sleyther','Calsin Pacsi',1.72);
+        let erika = new Persona('Erika','Luna',1.65);
+        let arturo = new Desarrollador('Arturo','Martinez',1.89);
+        let maria = new Desarrollador('Maria','Goméz',1.65);
+
+        sleyther.saludar();
+        erika.saludar(responderSaludo);
+        arturo.saludar(responderSaludo);
+        maria.saludar(responderSaludo);
+
+    </script>
+</body>
+</html>

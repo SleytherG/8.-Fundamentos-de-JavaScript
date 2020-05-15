@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let sleyther = {
+            nombre: 'Sleyther Giulio',
+            apellido: 'Calsin Pacsi',
+            edad: 23,
+            peso: 70
+        }
+        console.log(`Al inicio del año ${sleyther.nombre} pesa ${sleyther.peso}kg`);
+        
+        const INCREMENTO_PESO = 0.2;
+        const DIAS_DEL_ANIO = 365;
+        const aumentarDePeso = persona => persona.peso += INCREMENTO_PESO;
+        const adelgazar = persona => persona.peso -= INCREMENTO_PESO;
+
+        for(let i = 1; i <= DIAS_DEL_ANIO; i++) {
+            let random = Math.random(0,1);
+            
+            if(random < 0.25) {
+                aumentarDePeso(sleyther)
+            } else if(random < 0.5) {
+                adelgazar(sleyther)
+            }
+        }
+
+        console.log(`Al final del año ${sleyther.nombre} pesa ${sleyther.peso.toFixed(1)}kg`);
+
+    </script>
+</body>
+</html>

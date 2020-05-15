@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let sleyther = {
+            nombre: 'Sleyther Giulio',
+            apellido: 'Calsin Pacsi',
+            edad: 23
+        }
+        let dario = {
+            nombre: 'Dario',
+            apellido: 'Susnisky',
+            edad: 27
+        }
+
+        // function imprimirNombreEnMayusculas(persona) {
+        //     // let nombre = persona.nombre.toUpperCase();
+        //     // let apellido = persona.apellido.toLowerCase();
+        //     console.log(persona.nombre.toUpperCase())
+        //     console.log(persona.apellido.toUpperCase())
+        // }
+
+        function imprimirNombreEnMayusculas({ nombre,apellido,edad }) {
+            console.log(nombre.toUpperCase(),apellido.toLowerCase(),`- Tiene ${edad} años`)
+        }
+
+        imprimirNombreEnMayusculas(sleyther);
+        imprimirNombreEnMayusculas(dario);
+        imprimirNombreEnMayusculas({ nombre:'Pepito',apellido:'Gonzales',edad: 30})
+        imprimirNombreEnMayusculas({})
+
+
+
+
+
+    </script>
+</body>
+</html>

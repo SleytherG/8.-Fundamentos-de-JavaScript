@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function heredaDe(prototipoHijo, prototipoPadre) {
+            let fn = function () {}
+            fn.prototype = prototipoPadre.prototype;
+            prototipoHijo.prototype = new fn;
+            prototipoHijo.prototype.constructor = prototipoHijo;
+        }
+
+        function Persona(nombre,apellido,altura) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.altura = altura;
+        }
+
+        Persona.prototype.saludar = function () {
+            console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`);
+            // if (this.altura > 1.70) {
+            //     console.log(`${this.nombre} es una persona alta ya que mide más de 1.70mts y su altura es ${this.altura}mts`);
+            // } else {
+            //     console.log(`${this.nombre} no es una persona alta ya que mide menos de 1.70mts y su estatura es ${this.altura}mts`);
+            // }
+        }
+        Persona.prototype.soyAlto = function () {
+            return this.altura > 1.7;
+        }
+        
+        function Desarrollador(nombre,apellido) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+        }
+        heredaDe(Desarrollador, Persona);
+
+        Desarrollador.prototype.saludar = function () {
+            console.log(`Hola, me llamo ${this.nombre} ${this.apellido} y soy desarrollador/a.`);
+        }
+
+
+        // let sleyther = new Persona('Sleyther','Calsin Pacsi',1.70);
+        // let erika = new Persona('Erika','Luna',1.60);
+        // let arturo = new Persona('Arturo','Martinez',1.75);
+        // sleyther.saludar();
+        // erika.saludar();
+        // arturo.saludar();
+    </script>
+</body>
+</html>
